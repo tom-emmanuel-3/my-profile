@@ -1,0 +1,269 @@
+/* Tom EMMANUEL's Profile - CSS Stylesheet */
+
+/* === ELEMENT SELECTORS === */
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  color: rgb(40, 40, 40);
+  background-color: rgb(245, 245, 245);
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headers styling - Grouping selectors */
+h1, h2, h3 {
+  font-family: Helvetica, sans-serif;
+}
+
+h1 {
+  color: rgb(50, 50, 50);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #FF530D;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: rgb(60, 60, 60);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraphs */
+p {
+  margin: 0 0 20px 0;
+}
+
+/* Paragraph inside introduction - extra bottom margin for spacing before button */
+#introduction p {
+  margin-bottom: 30px;
+}
+
+/* Links with pseudo-class for hover */
+a {
+  color: #FF530D;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgb(200, 60, 10);
+}
+
+/* === CLASS SELECTORS === */
+
+/* Container - centered with fixed width and automatic margins */
+.container {
+  width: 700px;
+  margin: 40px auto;
+}
+
+/* Card-white - white boxes with shadow and elegant design */
+.card-white {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Card hover effect - lift on hover */
+.card-white:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Text alignment classes */
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Image classes - combining multiple classes */
+.img-circle {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.img-bordered {
+  border: 3px solid #FF530D;
+  box-shadow: 0 5px 15px rgba(255, 83, 13, 0.2);
+}
+
+/* Button styling */
+.btn-red {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #FF530D;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(255, 83, 13, 0.3);
+}
+
+.btn-red:hover {
+  background-color: rgb(200, 60, 10);
+  text-decoration: none;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 83, 13, 0.4);
+}
+
+/* List inline - horizontal list */
+.list-inline {
+  list-style: none;
+  padding-left: 0px;
+  margin: 20px 0 0 0;
+}
+
+/* Descendant selector - list items inside list-inline */
+.list-inline > li {
+  display: inline;
+  padding: 0px 20px;
+}
+
+/* Descendant selector - links inside list-inline */
+.list-inline a {
+  font-size: 30px;
+  transition: all 0.3s ease;
+}
+
+.list-inline a:hover {
+  transform: scale(1.2);
+  display: inline-block;
+}
+
+/* === ID SELECTORS === */
+
+/* Introduction section - unique styling */
+#introduction {
+  text-align: center;
+  background: linear-gradient(135deg, white 0%, rgb(255, 250, 245) 100%);
+}
+
+/* === RESPONSIVE MEDIA QUERIES === */
+/* From least specific to most specific */
+
+@media (max-width: 960px) {
+  /* For tablets and smaller screens < 960px */
+  .container {
+    width: 600px;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For small tablets < 720px */
+  .container {
+    width: 500px;
+  }
+  
+  .card-white {
+    padding: 25px;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+  
+  .img-circle {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For mobile phones < 540px */
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  .card-white {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  .img-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .btn-red {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  
+  .list-inline {
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .list-inline a {
+    font-size: 25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
